@@ -9,12 +9,133 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.0/animate.min.css"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
     <script>
       new WOW().init();
     </script>
+
+    <style>
+      .slick-initialized .slick-slide {
+        display: flex !important;
+      }
+
+      .active {
+        background: #501975 !important;
+        display: flex;
+      }
+      .active p {
+        color: white;
+      }
+    </style>
   </head>
-  <body class="bg-[#E9F0F3]">
+  <body class="font-[Inter]">
+    <div
+      class="menu-block fixed top-0 w-full bg-white/80 backdrop-blur-lg z-20"
+    >
+      <div
+        class="container px-3.5 md:px-0 sm: py-0 md:w-full md:py-0 lg:w-full mx-auto"
+      >
+        <div class="menu w-full flex items-center justify-between py-[8px]">
+          <a href="">
+            <img src="images/logo-lesson-study.png" alt="" />
+          </a>
+
+          <div class="ml-5 hidden lg:flex">
+            <a href="">ҚАЗ</a>
+            <a href="" class="ml-2 underline">РУ</a>
+          </div>
+          <div class="mobile-menu xl:hidden flex items-center">
+            <p class="mr-5 text-xl font-semibold">Меню</p>
+            <svg
+              width="24"
+              height="25"
+              viewBox="0 0 24 25"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M16 18.5V20.5H5V18.5H16ZM21 11.5V13.5H3V11.5H21ZM19 4.5V6.5H8V4.5H19Z"
+                fill="black"
+              ></path>
+            </svg>
+          </div>
+
+          <div
+            class="nav-block transition-all duration-300 hidden xl:flex xl:relative absolute top-0 bg-white xl:bg-transparent h-screen xl:h-auto xl:right-0 xl:justify-end left-0 w-full flex-col justify-center xl:flex-row items-center"
+          >
+            <svg
+              class="close-menu xl:hidden w-10 h-10 absolute top-10 right-5 text-[#AC3ED8]"
+              height="512"
+              viewBox="0 0 24 24"
+              width="512"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g id="Layer_2" data-name="Layer 2">
+                <path
+                  d="m19 2h-14a3 3 0 0 0 -3 3v14a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3v-14a3 3 0 0 0 -3-3zm-2.76 12.83a1 1 0 1 1 -1.41 1.41l-2.83-2.83-2.83 2.83a1 1 0 1 1 -1.41-1.41l2.83-2.83-2.83-2.83a1 1 0 0 1 1.41-1.41l2.83 2.83 2.83-2.83a1 1 0 1 1 1.41 1.41l-2.83 2.83z"
+                />
+                <path
+                  d="m19 23h-14a4 4 0 0 1 -4-4v-14a4 4 0 0 1 4-4h14a4 4 0 0 1 4 4v14a4 4 0 0 1 -4 4zm-14-20a2 2 0 0 0 -2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-14a2 2 0 0 0 -2-2z"
+                />
+              </g>
+            </svg>
+            <div class="ml-5 flex lg:hidden">
+              <a href="">ҚАЗ</a>
+              <a href="" class="ml-2 underline">РУ</a>
+            </div>
+            <nav class="mr-0 xl:mr-[100px]">
+              <ul
+                class="mt-5 flex flex-col xl:flex-row items-center justify-between w-full xl:w-[735px]"
+              >
+                <a href="" class="xl:hidden mb-10">
+                  <img src="images/logo-lesson-study.png" alt="" />
+                </a>
+                <li class="mb-5">
+                  <a href="" class="text-[#230231] font-medium text-xl"
+                    >О конференции</a
+                  >
+                </li>
+                <li class="mb-5">
+                  <a href="" class="text-[#230231] font-medium text-xl"
+                    >Программа</a
+                  >
+                </li>
+                <li class="mb-5">
+                  <a href="" class="text-[#230231] font-medium text-xl"
+                    >Спикеры</a
+                  >
+                </li>
+                <li class="mb-5">
+                  <a href="" class="text-[#230231] font-medium text-xl"
+                    >Прием абстрактов</a
+                  >
+                </li>
+                <li class="mb-5">
+                  <a href="" class="text-[#230231] font-medium text-xl"
+                    >Контакты</a
+                  >
+                </li>
+              </ul>
+            </nav>
+
+            <a
+              href=""
+              class="xl:mt-0 mt-5 bg-[#AC3ED8] py-[8px] px-[32px] text-white rounded-[100px] text-xl"
+              >Зарегистрироваться</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="block1">
       <div
         class="container px-3.5 md:px-0 sm: py-0 md:w-full md:py-0 lg:w-full mx-auto"
@@ -53,17 +174,16 @@
           />
         </div>
 
-        <div class="flex flex-wrap justify-between items-start mt-16">
-          <div class="w-full mb-5 md:w-1/2">
-            <img
-              class="w-full h-[550px] object-cover rounded-3xl"
-              src="images/about_conference.png"
-              alt=""
-            />
-          </div>
-          <div class="flex flex-col items-start w-full md:w-[48%]">
-            <p class="text-[#230231] font-semibold text-3xl">О конференции</p>
-            <p class="text-xl">
+        <div class="flex flex-wrap justify-between items-end mt-16">
+          <div
+            class="order-2 lg:order-1 flex flex-col items-start w-full md:w-[48%]"
+          >
+            <p
+              class="text-[#501975] font-black text-3xl font-['Playfair_Display'] uppercase"
+            >
+              О конференции
+            </p>
+            <p class="text-xl mt-[40px]">
               Национальная конференция «Профессиональный диалог: <br />
               как Lesson Study меняет обучение» – это уникальная международная
               платформа для обмена опытом и диалога между педагогами Казахстана
@@ -74,12 +194,24 @@
               работ и конкурс постеров с результатами Исследования урока.
             </p>
 
-            <p class="text-[#230231] font-semibold text-3xl mt-10 mb-5">Цели</p>
+            <p
+              class="text-[#230231] font-bold text-3xl mt-10 mb-5 font-['Playfair_Display']"
+            >
+              Цели
+            </p>
             <li class="text-xl">
               Обмен опытом в области исследовательской деятельности
             </li>
             <li class="text-xl">Распространение результатов исследований</li>
             <li class="text-xl">Установление профессионального диалога</li>
+          </div>
+
+          <div class="order-1 lg:order-2 w-full mb-5 md:w-1/2">
+            <img
+              class="w-full h-auto object-cover"
+              src="images/video-banner.png"
+              alt=""
+            />
           </div>
         </div>
 
@@ -112,36 +244,36 @@
 
         <div class="flex flex-col items-center justify-center mt-16">
           <p
-            class="text-[#230231] text-3xl font-semibold wow animate__animated animate__fadeInUp"
+            class="font-['Playfair_Display'] text-left w-full text-[#230231] text-3xl font-black uppercase wow animate__animated animate__fadeInUp"
           >
             Кто может участвовать?
           </p>
 
-          <div class="w-full flex flex-wrap justify-between items-start mt-10">
+          <div class="w-full flex flex-wrap justify-between mt-10">
             <div
-              class="flex flex-col items-center w-full md:w-[32%] wow animate__animated animate__fadeInLeft animate__delay-faster"
+              class="flex shadow-md rounded-xl px-3 py-2 mb-5 xl:mb-0 items-center w-full md:w-[32%] wow animate__animated animate__fadeInLeft animate__delay-faster"
             >
-              <p class="text-[100px] text-[#39B208] font-semibold">1</p>
-              <p class="text-xl text-center">
+              <p class="text-[48px] text-[#39B208] font-semibold">1</p>
+              <p class="text-xl text-left ml-5">
                 Педагоги и руководители образовательных организаций
               </p>
             </div>
 
             <div
-              class="flex flex-col items-center w-full md:w-[32%] wow animate__animated animate__fadeInLeft animate__delay-1s"
+              class="flex shadow-md rounded-xl px-3 py-2 mb-5 xl:mb-0 items-center w-full md:w-[32%] wow animate__animated animate__fadeInLeft animate__delay-1s"
             >
-              <p class="text-[100px] text-[#39B208] font-semibold">2</p>
-              <p class="text-xl text-center">
+              <p class="text-[48px] text-[#39B208] font-semibold">2</p>
+              <p class="text-xl text-left ml-5">
                 Сотрудники центров повышения квалификации и методических
                 кабинетов
               </p>
             </div>
 
             <div
-              class="flex flex-col items-center w-full md:w-[32%] wow animate__animated animate__fadeInLeft animate__delay-2s"
+              class="flex shadow-md rounded-xl px-3 py-2 mb-5 xl:mb-0 items-center w-full md:w-[32%] wow animate__animated animate__fadeInLeft animate__delay-2s"
             >
-              <p class="text-[100px] text-[#39B208] font-semibold">3</p>
-              <p class="text-xl text-center">
+              <p class="text-[48px] text-[#39B208] font-semibold">3</p>
+              <p class="text-xl text-left ml-5">
                 Студенты вузов и колледжей, вовлечённые в реализацию Lesson
                 Study
               </p>
@@ -151,16 +283,395 @@
 
         <a
           href=""
-          class="wow animate__animated animate__fadeInUp flex font-bold py-3.5 mt-16 items-center justify-center w-full text-center rounded-3xl bg-[#AC3ED8] transition-all duration-300 border-2 border-[#AC3ED8] hover:text-[#AC3ED8] hover:bg-white text-white"
+          class="hidden wow animate__animated animate__fadeInUp flex font-bold py-3.5 mt-16 items-center justify-center w-full text-center rounded-3xl bg-[#AC3ED8] transition-all duration-300 border-2 border-[#AC3ED8] hover:text-[#AC3ED8] hover:bg-white text-white"
         >
           Зарегистрироваться
         </a>
 
+        <div class="flex flex-col py-[40px]">
+          <p
+            class="italic text-center w-full text-[#501975] text-3xl font-bold uppercase wow animate__animated animate__fadeInUp"
+          >
+            7 причин принять участие в национальной конференции
+          </p>
+
+          <div class="flex flex-wrap justify-between py-10">
+            <div class="w-full relative mb-5">
+              <img
+                class="w-full h-[300px] xl:h-auto object-cover rounded-[16px]"
+                src="images/opin-1.png"
+                alt=""
+              />
+              <div class="flex flex-col absolute bottom-10 left-5">
+                <p class="font-bold text-2xl text-white uppercase">
+                  Развитие профессиональных компетенций
+                </p>
+                <p class="font-normal text-xl text-white">
+                  Освоение новых подходов и стратегий, необходимых для повышения
+                  качества обучения
+                </p>
+              </div>
+            </div>
+
+            <div class="w-full lg:w-[49%] relative mb-5">
+              <img
+                class="w-full rounded-[16px] h-[300px] xl:h-auto object-cover"
+                src="images/opin-2.png"
+                alt=""
+              />
+              <div class="flex flex-col absolute bottom-10 left-5">
+                <p class="font-bold text-2xl text-white uppercase">
+                  Взаимодействие с ведущими экспертами
+                </p>
+                <p class="font-normal text-base text-white">
+                  Возможность получить уникальные знания от казахстанских и
+                  международных специалистов по Lesson Study
+                </p>
+              </div>
+            </div>
+
+            <div class="w-full lg:w-[49%] relative mb-5">
+              <img
+                class="w-full rounded-[16px] h-[300px] xl:h-auto object-cover"
+                src="images/opin-3.png"
+                alt=""
+              />
+              <div class="flex flex-col absolute bottom-10 left-5">
+                <p class="font-bold text-2xl text-white uppercase">
+                  Практика мастер-классов
+                </p>
+                <p class="font-normal text-base text-white w-full">
+                  Участие в интерактивных сессиях и наблюдение
+                  исследовательского урока, <br />
+                  что позволит глубже понять методику и совершенствовать навыки
+                  её применения в школьной практике
+                </p>
+              </div>
+            </div>
+
+            <div class="w-full lg:w-[49%] relative mb-5">
+              <img
+                class="w-full rounded-[16px] h-[300px] xl:h-auto object-cover"
+                src="images/opin-4.png"
+                alt=""
+              />
+              <div class="flex flex-col absolute bottom-10 left-5">
+                <p class="font-bold text-2xl text-white uppercase">
+                  Стремление к профессиональному развитию
+                </p>
+                <p class="font-normal text-base text-white">
+                  Непрерывное совершенствование навыков и мастерства педагога,
+                  <br />
+                  являющееся важным фактором его профессионального роста
+                </p>
+              </div>
+            </div>
+
+            <div class="w-full lg:w-[49%] relative mb-5">
+              <img
+                class="w-full rounded-[16px] h-[300px] xl:h-auto object-cover"
+                src="images/opin-5.png"
+                alt=""
+              />
+              <div class="flex flex-col absolute bottom-10 left-5">
+                <p class="font-bold text-2xl text-white uppercase">
+                  Расширение профессиональных связей
+                </p>
+                <p class="font-normal text-base text-white">
+                  Установление контактов с педагогами и методистами, создание
+                  профессионального сообщества и обмен передовым опытом
+                </p>
+              </div>
+            </div>
+
+            <div class="w-full lg:w-[49%] relative mb-5">
+              <img
+                class="w-full rounded-[16px] h-[300px] xl:h-auto object-cover"
+                src="images/opin-6.png"
+                alt=""
+              />
+              <div class="flex flex-col absolute bottom-10 left-5">
+                <p class="font-bold text-2xl text-white uppercase">
+                  Доступ к актуальным исследованиям
+                </p>
+                <p class="font-normal text-base text-white text-wrap">
+                  Знакомство с актуальными темами и результатами исследований в
+                  области Lesson Study и образования
+                </p>
+              </div>
+            </div>
+
+            <div class="w-full lg:w-[49%] relative mb-5">
+              <img
+                class="w-full rounded-[16px] h-[300px] xl:h-auto object-cover"
+                src="images/opin-7.png"
+                alt=""
+              />
+              <div class="flex flex-col absolute bottom-10 left-5">
+                <p class="font-bold text-2xl text-white uppercase">
+                  Обсуждение проблем и перспектив
+                </p>
+                <p class="font-normal text-base text-white">
+                  Участие в панельных дискуссиях, возможность рассмотреть
+                  актуальные вопросы образования и пути их решения
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex flex-col py-[40px]">
+          <p
+            class="font-['Playfair_Display'] text-center w-full text-[#501975] text-3xl font-black uppercase wow animate__animated animate__fadeInUp"
+          >
+            спикеры
+          </p>
+
+          <div class="slider-speakers w-full slider mt-[40px]">
+            <div class="flex flex-col items-center justify-center">
+              <img
+                class="w-56 h-56 mx-auto"
+                src="images/speaker-1.png"
+                alt=""
+              />
+              <p
+                class="text-[#AC3ED8] text-center text-2xl font-bold mt-8 w-full"
+              >
+                Стефан Клива
+              </p>
+              <p
+                class="text-[#230231] text-center text-base font-normal w-full lg:w-80"
+              >
+                Высшая педагогическая школа Лозанны (Швейцария)
+              </p>
+            </div>
+
+            <div class="flex flex-col items-center justify-center">
+              <img
+                class="w-56 h-56 mx-auto"
+                src="images/speaker-2.jpg"
+                alt=""
+              />
+              <p
+                class="text-[#AC3ED8] text-center text-2xl font-bold mt-8 w-full"
+              >
+                Мельникова Юлия
+              </p>
+              <p
+                class="text-[#230231] text-center text-base font-normal w-full lg:w-80"
+              >
+                Старший менеджер филиала ЦПМ в г. Павлодар (Казахстан)
+              </p>
+            </div>
+
+            <div class="flex flex-col items-center justify-center">
+              <img
+                class="w-56 h-56 mx-auto"
+                src="images/speaker-3.png"
+                alt=""
+              />
+              <p
+                class="text-[#AC3ED8] text-center text-2xl font-bold mt-8 w-full"
+              >
+                Др. Питер Дадли
+              </p>
+              <p
+                class="text-[#230231] text-center text-base font-normal w-full lg:w-80"
+              >
+                Профессор Факультета образования, Кембриджский Университет
+                 (Великобритания)
+              </p>
+            </div>
+
+            <div class="flex flex-col items-center justify-center">
+              <img
+                class="w-56 h-56 mx-auto"
+                src="images/speaker-4.png"
+                alt=""
+              />
+              <p
+                class="text-[#AC3ED8] text-center text-2xl font-bold mt-8 w-full"
+              >
+                Джонсунг Ким
+              </p>
+              <p
+                class="text-[#230231] text-center text-base font-normal w-full lg:w-80"
+              >
+                PhD, Университет Хиросимы Высшая школа гуманитарных и социальных
+                наук (Япония) видео подключение
+              </p>
+            </div>
+
+            <div class="flex flex-col items-center justify-center">
+              <img
+                class="w-56 h-56 mx-auto"
+                src="images/speaker-5.png"
+                alt=""
+              />
+              <p
+                class="text-[#AC3ED8] text-center text-2xl font-bold mt-8 w-full"
+              >
+                Чой Бан Хенг
+              </p>
+              <p
+                class="text-[#230231] text-center text-base font-normal w-full lg:w-80"
+              >
+                ассоциированный профессор, Национальный институт образования,
+                Наньянский технологический университет (Сингапур) видео
+                подключение
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex flex-col py-[40px]">
+          <p
+            class="font-['Playfair_Display'] text-center w-full text-[#501975] text-3xl font-black uppercase wow animate__animated animate__fadeInUp"
+          >
+            программа
+          </p>
+
+          <div
+            class="tabs flex flex-wrap w-full justify-center mt-[40px] items-center"
+          >
+            <div class="flex flex-col px-4 mt-3 w-[32%] lg:w-52">
+              <div
+                class="flex px-3 py-2 rounded-full group cursor-pointer w-full hover:bg-[#501975] justify-center transition-all duration-500 bg-transparent main tablinks items-center active"
+              >
+                <p
+                  class="text-[#230231] font-semibold group-hover:text-white text-center"
+                >
+                  День 1
+                </p>
+              </div>
+            </div>
+
+            <div class="flex flex-col px-4 mt-3 w-[32%] lg:w-52">
+              <div
+                class="flex group hover:bg-[#501975] holi transition-all duration-500 bg-transparent px-3 py-2 rounded-full cursor-pointer w-full justify-center tablinks items-center job"
+              >
+                <p class="text-[#230231] font-semibold group-hover:text-white">
+                  День 2
+                </p>
+              </div>
+            </div>
+
+            <div class="flex flex-col px-4 mt-3 w-[32%] lg:w-52">
+              <div
+                class="flex group hover:bg-[#501975] feed transition-all duration-500 bg-transparent px-3 py-2 rounded-full justify-center cursor-pointer w-full tablinks items-center job"
+              >
+                <p class="text-[#230231] font-semibold group-hover:text-white">
+                  День 3
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="trainer-big-info w-full mt-3 lg:mt-0">
+            <div
+              class="trainer-our-information w-full flex flex-col py-8 tabcontent mainInfo"
+              id="tabcontent"
+            >
+              <div
+                class="w-full shadow-lg flex flex-wrap items-center py-[16px] px-[32px] rounded-xl"
+              >
+                <p class="text-[#39B208] font-bold text-2xl">09:00 - 10:00</p>
+                <div class="flex flex-col ml-0 md:ml-5">
+                  <p class="text-[#230231] text-[32px] font-bold uppercase">
+                    Название выступления
+                  </p>
+                  <p class="text-[#39B208] text-2xl font-bold uppercase">
+                    ИМЯ ФАМИЛИЯ
+                  </p>
+                  <p class="text-[#230231]">Краткое описание выступления</p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="trainer-our-information hidden w-full flex flex-col bg-white rounded-xl py-8 relative left-0 tabcontent holiInfo"
+              id="holidays"
+            >
+              <div
+                class="w-full shadow-lg flex flex-wrap items-center py-[16px] px-[32px] rounded-xl"
+              >
+                <p class="text-[#39B208] font-bold text-2xl">09:00 - 10:00</p>
+                <div class="flex flex-col ml-0 md:ml-5">
+                  <p class="text-[#230231] text-[32px] font-bold uppercase">
+                    Название выступления
+                  </p>
+                  <p class="text-[#39B208] text-2xl font-bold uppercase">
+                    ИМЯ ФАМИЛИЯ
+                  </p>
+                  <p class="text-[#230231]">Краткое описание выступления</p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="trainer-our-information hidden feedInfo w-full flex flex-col bg-white rounded-xl py-8 relative left-0 tabcontent holiInfo"
+              id="feedback"
+            >
+              <div
+                class="w-full shadow-lg flex flex-wrap items-center py-[16px] px-[32px] rounded-xl"
+              >
+                <p class="text-[#39B208] font-bold text-2xl">09:00 - 10:00</p>
+                <div class="flex flex-col ml-0 md:ml-5">
+                  <p class="text-[#230231] text-[32px] font-bold uppercase">
+                    Название выступления
+                  </p>
+                  <p class="text-[#39B208] text-2xl font-bold uppercase">
+                    ИМЯ ФАМИЛИЯ
+                  </p>
+                  <p class="text-[#230231]">Краткое описание выступления</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="w-full bg-[#501975] py-8 px-3 rounded-lg flex flex-wrap justify-center flex-start"
+        >
+          <div class="flex flex-col items-center w-full md:w-1/3 mb-5 md:mb-0">
+            <span
+              class="numscroller text-white font-black text-3xl md:text-[48px] text-white"
+              data-min="1"
+              data-max="420"
+              data-delay="5"
+              data-increment="10"
+            ></span>
+            <p class="mt-5 text-white text-xl">участников</p>
+          </div>
+
+          <div class="flex flex-col items-center w-full md:w-1/3 mb-5 md:mb-0">
+            <span
+              class="numscroller text-white font-black text-3xl md:text-[48px] text-white"
+              data-min="1"
+              data-max="95"
+              data-delay="5"
+              data-increment="10"
+            ></span>
+            <p class="mt-5 text-white text-xl">докладов</p>
+          </div>
+
+          <div class="flex flex-col items-center w-full md:w-1/3 mb-5 md:mb-0">
+            <span
+              class="numscroller text-white font-black text-3xl md:text-[48px] text-white"
+              data-min="1"
+              data-max="300"
+              data-delay="5"
+              data-increment="10"
+            ></span>
+            <p class="mt-5 text-white text-xl">педагогов</p>
+          </div>
+        </div>
+
         <div class="flex flex-col items-center justify-center mt-16">
           <p
-            class="text-[#230231] text-3xl font-semibold wow animate__animated animate__fadeInUp"
+            class="font-['Playfair_Display'] text-center w-full text-[#501975] text-3xl font-black uppercase wow animate__animated animate__fadeInUp"
           >
-            Направления секционых заседаний
+            секционые заседания
           </p>
 
           <div class="flex flex-wrap items-start justify-between w-full mt-16">
@@ -220,16 +731,25 @@
           </div>
         </div>
 
-        <a
-          href=""
-          class="wow animate__animated animate__fadeInUp flex font-bold py-3.5 mt-16 items-center justify-center w-full text-center rounded-3xl bg-transparent transition-all duration-300 border-2 border-[#39B208] hover:text-white hover:bg-[#39B208] text-[#39B208]"
-        >
-          Посмотреть требования к абстракту
-        </a>
+        <div class="flex flex-wrap justify-between items-center">
+          <a
+            href=""
+            class="wow animate__animated animate__fadeInUp flex font-bold py-3.5 mb-5 items-center justify-center w-full md:w-[49%] text-center rounded-3xl bg-[#AC3ED8] transition-all duration-300 border-2 border-[#AC3ED8] hover:text-[#AC3ED8] hover:bg-[#fff] text-white"
+          >
+            Условия подачи абстракта
+          </a>
+
+          <a
+            href=""
+            class="wow animate__animated animate__fadeInUp flex font-bold py-3.5 mb-5 items-center justify-center w-full md:w-[49%] text-center rounded-3xl bg-transparent transition-all duration-300 border-2 border-[#AC3ED8] hover:text-white hover:bg-[#AC3ED8] text-[#AC3ED8]"
+          >
+            Скачать шаблон постера
+          </a>
+        </div>
 
         <div class="flex flex-wrap justify-around items-center mt-16">
           <p
-            class="w-full mx-auto text-[#230231] text-3xl font-semibold text-center wow animate__animated animate__fadeInUp"
+            class="font-['Playfair_Display'] text-center w-full text-[#501975] text-3xl font-black uppercase wow animate__animated animate__fadeInUp"
           >
             Тарифы участия
           </p>
@@ -244,7 +764,7 @@
                 Базовый тариф
               </p>
               <p class="text-[#230231] font-semibold text-4xl mb-8">
-                30 000 тг
+                40 000 тг
               </p>
 
               <a
@@ -265,7 +785,7 @@
                 наблюдения урока
               </p>
               <p class="text-[#230231] font-semibold text-4xl mb-8">
-                30 000 тг
+                45 000 тг
               </p>
 
               <a
@@ -277,7 +797,7 @@
           </div>
         </div>
 
-        <div
+        <!-- <div
           class="flex flex-wrap justify-around items-center mt-16 wow animate__animated animate__fadeInUp"
         >
           <div class="w-full mb-5 lg:w-1/2 flex justify-end lg:mr-5 mr-0">
@@ -311,18 +831,18 @@
               <span class="text-[#AC3ED8] font-semibold">- 20 минут</span>
             </li>
           </div>
-        </div>
-
+        </div> -->
+        <!-- 
         <a
           href=""
           class="wow animate__animated animate__fadeInUp flex font-bold py-3.5 mt-16 items-center justify-center w-full text-center rounded-3xl bg-transparent transition-all duration-300 border-2 border-[#39B208] hover:text-white hover:bg-[#39B208] text-[#39B208]"
         >
           Посмотреть требования к постеру
-        </a>
+        </a> -->
 
         <div class="w-full flex flex-col mt-24 md:px-[106px]">
           <p
-            class="w-full mx-auto text-[#230231] text-3xl font-semibold text-center"
+            class="font-['Playfair_Display'] text-center w-full text-[#501975] text-3xl font-black uppercase wow animate__animated animate__fadeInUp"
           >
             Условия и порядок участия на Конференции
           </p>
@@ -331,12 +851,12 @@
             class="flex flex-col md:flex-row justify-center items-center mt-8 wow animate__animated animate__fadeInLeft animate__delay-faster"
           >
             <p class="text-[#AC3ED8] font-semibold">
-              до <span class="text-3xl font-semibold ml-1">03.03.2025</span>
+              до <span class="text-3xl font-semibold ml-1">14.03.2025</span>
             </p>
 
             <p class="text-xl ml-0 md:ml-10 w-full lg:w-[537px]">
-              Oтправить абстракт с указанием направления секции и формат
-              выступления на е-mail: lsinfo@cpm.kz
+              До 14 марта отправить абстрактс указанием направления секциии
+              формат выступления по сайту
             </p>
           </div>
 
@@ -344,12 +864,12 @@
             class="flex flex-col md:flex-row justify-center items-center mt-8 wow animate__animated animate__fadeInLeft animate__delay-1s"
           >
             <p class="text-[#AC3ED8] font-semibold">
-              до <span class="text-3xl font-semibold ml-1">25.03.2025</span>
+              до <span class="text-3xl font-semibold ml-1">11.04.2025</span>
             </p>
 
             <p class="text-xl ml-0 md:ml-10 w-full lg:w-[537px]">
-              Пройти регистрацию на веб-странице конференции и произвести оплату
-              организационного взноса
+              До 11 апреля пройти регистрацию на веб-странице конференции и
+              произвести оплату организационного взноса
             </p>
           </div>
 
@@ -357,24 +877,23 @@
             class="flex flex-col md:flex-row justify-center items-center mt-8 wow animate__animated animate__fadeInLeft animate__delay-2s"
           >
             <p class="text-[#AC3ED8] font-semibold">
-              до <span class="text-3xl font-semibold ml-1">11.03.2025</span>
+              до <span class="text-3xl font-semibold ml-1">20.03.2025</span>
             </p>
 
             <p class="text-xl ml-0 md:ml-10 w-full lg:w-[537px]">
-              Оргкомитет отправляет приглашение педагогам, чьи материалы были
-              одобрены для: <br />
-              - выступления на секциях; <br />
-              - участия в конкурсе постеров.
+              До 20 марта оргкомитет отправляет приглашение педагогам, чьи
+              материалыбыли одобрены для выступления на секциях и для участия в
+              конкурсе постеров
             </p>
           </div>
         </div>
 
-        <a
+        <!-- <a
           href=""
           class="wow animate__animated animate__fadeInUp flex font-bold py-3.5 mt-16 items-center justify-center w-full text-center rounded-3xl bg-[#AC3ED8] transition-all duration-300 border-2 border-[#AC3ED8] hover:text-[#AC3ED8] hover:bg-white text-white"
         >
           Зарегистрироваться
-        </a>
+        </a> -->
 
         <div
           class="wow animate__animated animate__fadeInUp w-full rounded-2xl flex flex-col items-center bg-[#766E7A] px-10 py-6 mt-16"
@@ -396,6 +915,81 @@
               Все участники получают электронные сертификаты. Спикеры и
               участники постерной презентации получают сертификат спикера.
             </li>
+          </div>
+        </div>
+
+        <div class="flex flex-col py-[40px]">
+          <p
+            class="font-['Playfair_Display'] text-center w-full text-[#501975] text-3xl font-black uppercase wow animate__animated animate__fadeInUp"
+          >
+            спонсоры и партнеры
+          </p>
+
+          <div class="slider-speakers w-full slider mt-[40px]">
+            <div class="flex flex-col items-center justify-center">
+              <img
+                class="w-56 h-56 mx-auto"
+                src="images/speaker-1.png"
+                alt=""
+              />
+              <p
+                class="text-[#AC3ED8] text-center text-2xl font-bold mt-8 w-full"
+              >
+                Стефан Клива
+              </p>
+            </div>
+
+            <div class="flex flex-col items-center justify-center">
+              <img
+                class="w-56 h-56 mx-auto"
+                src="images/speaker-2.jpg"
+                alt=""
+              />
+              <p
+                class="text-[#AC3ED8] text-center text-2xl font-bold mt-8 w-full"
+              >
+                Мельникова Юлия
+              </p>
+            </div>
+
+            <div class="flex flex-col items-center justify-center">
+              <img
+                class="w-56 h-56 mx-auto"
+                src="images/speaker-3.png"
+                alt=""
+              />
+              <p
+                class="text-[#AC3ED8] text-center text-2xl font-bold mt-8 w-full"
+              >
+                Др. Питер Дадли
+              </p>
+            </div>
+
+            <div class="flex flex-col items-center justify-center">
+              <img
+                class="w-56 h-56 mx-auto"
+                src="images/speaker-4.png"
+                alt=""
+              />
+              <p
+                class="text-[#AC3ED8] text-center text-2xl font-bold mt-8 w-full"
+              >
+                Джонсунг Ким
+              </p>
+            </div>
+
+            <div class="flex flex-col items-center justify-center">
+              <img
+                class="w-56 h-56 mx-auto"
+                src="images/speaker-5.png"
+                alt=""
+              />
+              <p
+                class="text-[#AC3ED8] text-center text-2xl font-bold mt-8 w-full"
+              >
+                Чой Бан Хенг
+              </p>
+            </div>
           </div>
         </div>
 
@@ -521,6 +1115,8 @@
       integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
       crossorigin="anonymous"
     ></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
     <script src="https://bastauproject.kz/themes/demo/assets/javascript/numscroller-1.0.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
