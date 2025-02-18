@@ -29,26 +29,6 @@ $(document).ready(function () {
       },
     ],
   });
-
-  document.addEventListener("DOMContentLoaded", function () {
-    const links = document.querySelectorAll('a[href^="#"]');
-
-    for (let link of links) {
-      link.addEventListener("click", function (event) {
-        event.preventDefault();
-
-        const targetId = link.getAttribute("href").substring(1);
-        const targetElement = document.getElementById(targetId);
-
-        if (targetElement) {
-          targetElement.scrollIntoView({
-            behavior: "smooth",
-            block: "start",
-          });
-        }
-      });
-    }
-  });
 });
 
 let mainInfo = document.querySelector(".mainInfo");
@@ -84,3 +64,23 @@ function openTab(tabContent, tabButton) {
   tabContent.style.display = "block";
   tabButton.classList.add("active");
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+  const links = document.querySelectorAll('a[href^="#"]');
+
+  for (let link of links) {
+    link.addEventListener("click", function (event) {
+      event.preventDefault();
+
+      const targetId = link.getAttribute("href").substring(1);
+      const targetElement = document.getElementById(targetId);
+
+      if (targetElement) {
+        targetElement.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }
+    });
+  }
+});
